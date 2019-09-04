@@ -1,14 +1,25 @@
 'use strict';
 
 // load modules
-const express = require('express');
-const morgan = require('morgan');
+const express = require('express')
+const morgan = require('morgan')
+const user = require('./routes/user')
+const course = require('./routes/course')
+const home = require('./routes/home')
+// create the Express app
+const app = express();
+
+//api routes
+app.use('/api', user)
+app.use('/api', course)
+app.use('/api', home)
+
 
 // variable to enable global error logging
 const enableGlobalErrorLogging = process.env.ENABLE_GLOBAL_ERROR_LOGGING === 'true';
 
-// create the Express app
-const app = express();
+
+
 
 // setup morgan which gives us http request logging
 app.use(morgan('dev'));
