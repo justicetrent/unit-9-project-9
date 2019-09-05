@@ -2,12 +2,12 @@ module.exports = (sequelize, DataTypes) => {
     const Course = sequelize.define('course',
     {
         id: {
-            tpye: DataType.Integer,
+            tpye: DataType.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
         title: {
-            type: DataType.String,
+            type: DataType.STRING,
             allowNull: false,
             validate: {
                 notEmpty: { msg: 'Course.title property is required' }
@@ -15,18 +15,18 @@ module.exports = (sequelize, DataTypes) => {
 
         },
         description: {
-            type: DataType.Text,
+            type: DataType.TEXT,
             allowNull: false,
             validate: {
                 notEmpty: { msg: 'Course.description property is required' }
             }
         },
         estimatedTime: {
-            DataType: String,
-            allowNull:true
+            type: DataType.STRING,
+            allowNull: true
         },
         materialsNeeded: {
-            DataType: String,
+            type: DataType.STRING,
             allowNull: true
         }
         })

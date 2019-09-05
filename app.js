@@ -7,7 +7,6 @@ const user = require('./routes/user.js')
 const course = require('./routes/course.js')
 const sequelize = require('sequelize')
 // create the Express app
-const app = express();
 // variable to enable global error logging
 const enableGlobalErrorLogging = process.env.ENABLE_GLOBAL_ERROR_LOGGING === 'true';
 
