@@ -1,6 +1,5 @@
 const express = require('express')
 const router = express.Router()
-const course = require('../routes/course')
 
 //body-parsar middleware
 const bodyParser = require('body-parser');
@@ -9,7 +8,7 @@ router.use(bodyParser.json());
 router.set('models', require('../models'));
 
 //Send a GET request to /api/user route, which displays a user.
-router.get('/api/user', (req, res, next) => {
+router.get('/api/users', (req, res, next) => {
   res.status(200)
   res.json('{}');
 });
@@ -37,4 +36,3 @@ router.get('/api/user', (req, res, next) => {
 //     message: 'Route Not Found',
 //   });
 // });
-

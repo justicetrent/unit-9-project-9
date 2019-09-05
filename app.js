@@ -3,8 +3,7 @@
 // load modules
 const express = require('express');
 const morgan = require('morgan');
-const user = require('./routes/user.js')
-const course = require('./routes/course.js')
+const routes = require('./routes/routes')
 const sequelize = require('sequelize')
 // create the Express app
 // variable to enable global error logging
